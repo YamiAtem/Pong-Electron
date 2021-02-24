@@ -6,17 +6,15 @@ const H = window.innerHeight;
 
 var player_paddle, comp_paddle, ball;
 
-function preload() {
-
-}
-
 function setup() {
     createCanvas(W, H);
 
     // paddles
-    player_paddle = createSprite(770, 432, 10, 50);
+    player_paddle = createSprite(770, 482-25, 10, 50);
 }
 
 function draw() {
+    background(0);
+
     drawSprites();
 }
