@@ -10,7 +10,7 @@ const createWindow = () => {
     width: 856,
     height: 482,
     resizable: false,
-    icon: "icon.ico"
+    icon: "src/icon.ico"
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
