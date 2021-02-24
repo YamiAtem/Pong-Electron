@@ -14,7 +14,7 @@ function setup() {
     createCanvas(W, H);
 
     // paddles
-    player_paddle = createSprite();
+    player_paddle = createSprite(770, 432, 10, 50);
 }
 
 function draw() {
