@@ -31,17 +31,19 @@ localStorage["computer_score"] = 0;
 function setup() {
     createCanvas(W, H);
 
-    createMain();
+    create_main();
 }
 
 function draw() {
     background(0);
 
-    createBounceOffs();
+    create_bounce_offs();
 
     start();
 
     display_score();
+
+    create_net();
 
     drawSprites();
 }
