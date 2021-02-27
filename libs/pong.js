@@ -85,6 +85,41 @@ function create_net() {
  * and scores get calculated
 */
 
+function reset() {
+    ball.x = 200;
+    ball.y = 200;
+
+    player.y = 200;
+    computer.y = 200;
+}
+
+function game_over_reset() {
+    ball.x = 200;
+    ball.y = 200;
+
+    ball.setVelocity(0, 0);
+
+    player.y = 200;
+    computer.y = 200;
+
+    //highscore
+    if (localStorage["player_score"] < player_score) {
+        localStorage["player_score"] = player_score;
+    }
+
+    if (localStorage["computer_score"] < computer_score) {
+        localStorage["computer_score"] = computer_score;
+    }
+
+    //score reset
+    player_score = 0;
+    computer_score = 0;
+    score = 0;
+
+    console.log(localStorage["CompHighscore"]);
+    console.log(localStorage["PlayerHighscore"]);
+}
+
 function play() {
     if (game_state === PLAY) {
         //player control
