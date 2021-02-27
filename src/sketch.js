@@ -23,16 +23,15 @@ var edges;
 function setup() {
     createCanvas(W, H);
 
-    createMain(player, computer, ball, edges);
+    createMain();
 }
 
 function draw() {
-    background(255);
+    background(0);
 
-    createBounceOffs(ball);
+    createBounceOffs();
 
-    start(ball, game_state);
-    
+    start();
 
     drawSprites();
 }
