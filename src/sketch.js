@@ -20,6 +20,14 @@ var ball;
 //edges
 var edges;
 
+// player score
+var player_score;
+localStorage["player_highscore"];
+
+// computer score
+var computer_score;
+localStorage["computer_score"];
+
 function setup() {
     createCanvas(W, H);
 
@@ -32,6 +40,8 @@ function draw() {
     createBounceOffs();
 
     start();
+
+    display_score();
 
     drawSprites();
 }
