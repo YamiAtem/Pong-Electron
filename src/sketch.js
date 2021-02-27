@@ -4,6 +4,13 @@
 const W = window.innerWidth;
 const H = window.innerHeight;
 
+// gamestate
+const PLAY = "play"
+const START = "start"
+const END = "end"
+var game_state = START;
+
+
 //player and computer
 var player, computer;
 
@@ -23,6 +30,9 @@ function draw() {
     background(255);
 
     createBounceOffs(ball);
+
+    start(ball, game_state);
+    
 
     drawSprites();
 }
