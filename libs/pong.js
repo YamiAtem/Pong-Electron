@@ -1,4 +1,4 @@
-function createMain(player, computer, ball, edges) {
+function createMain() {
     //Player sprite
     player = createSprite(796, 241 - 40, 20, 96.4);
     player.shapeColor = "blue";
@@ -15,14 +15,14 @@ function createMain(player, computer, ball, edges) {
     edges = createEdgeSprites();
 }
 
-function createBounceOffs(ball) {
+function createBounceOffs() {
     ball.bounceOff(edges[3]);
     ball.bounceOff(edges[2]);
     ball.bounceOff(player);
     ball.bounceOff(computer);
 }
 
-function start(ball, game_state) {
+function start() {
     if (keyDown("space") && game_state === START) {
         ball.velocityX = 2;
         ball.velocityY = 2;
