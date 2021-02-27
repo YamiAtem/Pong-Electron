@@ -28,6 +28,9 @@ localStorage["player_highscore"] = 0;
 var computer_score = 0;
 localStorage["computer_score"] = 0;
 
+// general score
+var score = 0;
+
 function setup() {
     createCanvas(W, H);
 
@@ -44,6 +47,8 @@ function draw() {
     display_score();
 
     create_net();
+
+    play();
 
     drawSprites();
 }
