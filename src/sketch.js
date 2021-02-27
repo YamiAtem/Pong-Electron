@@ -4,7 +4,6 @@
 const W = window.innerWidth;
 const H = window.innerHeight;
 
-
 //player and computer
 var player, computer;
 
@@ -17,20 +16,7 @@ var edges;
 function setup() {
     createCanvas(W, H);
 
-    //Player sprite
-    player = createSprite(796, 241 - 40, 20, 96.4);
-    player.shapeColor = "blue";
-
-    //Computer
-    computer = createSprite(60, 241 - 40, 20, 96.4);
-    computer.shapeColor = "red";
-
-    //ball
-    ball = createSprite(200, 200, 10, 10);
-    ball.shapeColor = "yellow";
-
-    //edges
-    edges = createEdgeSprites();
+    createMain(player, computer, ball, edges);
 }
 
 function draw() {
