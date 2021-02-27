@@ -1,14 +1,14 @@
 function create_main() {
     //Player sprite
-    player = createSprite(796, 241 - 40, 20, 96.4);
+    player = createSprite(796, 241, 20, 96.4);
     player.shapeColor = "blue";
 
     //Computer
-    computer = createSprite(60, 241 - 40, 20, 96.4);
+    computer = createSprite(60, 241, 20, 96.4);
     computer.shapeColor = "red";
 
     //ball
-    ball = createSprite(428 - 12.5, 241 - 12.5, 25, 25);
+    ball = createSprite(428, 241, 25, 25);
     ball.shapeColor = "yellow";
 
     //edges
