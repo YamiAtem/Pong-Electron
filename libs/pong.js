@@ -1,4 +1,4 @@
-function createMain() {
+function create_main() {
     //Player sprite
     player = createSprite(796, 241 - 40, 20, 96.4);
     player.shapeColor = "blue";
@@ -15,7 +15,7 @@ function createMain() {
     edges = createEdgeSprites();
 }
 
-function createBounceOffs() {
+function create_bounce_offs() {
     ball.bounceOff(edges[3]);
     ball.bounceOff(edges[2]);
     ball.bounceOff(player);
@@ -39,5 +39,12 @@ function display_score() {
 
     fill("red");
     text("Computer Score: " + computer_score, 20, 30);
-    text("Computer Highscore: " + localStorage["computer_highscore"], 20, 50);
+    text("Computer Highscore: " + localStorage["computer_score"], 20, 50);
+}
+
+function create_net() {
+    for (var i = 0; i < 482; i += 20) {
+        stroke(255, 255, 255);
+        line(428, i, 428, i + 10);
+    }
 }
