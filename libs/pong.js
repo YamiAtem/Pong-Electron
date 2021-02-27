@@ -34,8 +34,8 @@ function start() {
 function display_score() {
     textSize(15);
     fill("blue");
-    text("Player Score: " + player_score, 250, 30);
-    text("Payer Highscore: " + localStorage["player_highscore"], 250, 50);
+    text("Player Score: " + player_score, 600, 30);
+    text("Payer Highscore: " + localStorage["player_highscore"], 600, 50);
 
     fill("red");
     text("Computer Score: " + computer_score, 20, 30);
