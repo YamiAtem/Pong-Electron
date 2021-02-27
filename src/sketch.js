@@ -21,12 +21,12 @@ var ball;
 var edges;
 
 // player score
-var player_score;
-localStorage["player_highscore"];
+var player_score = 0;
+localStorage["player_highscore"] = 0;
 
 // computer score
-var computer_score;
-localStorage["computer_score"];
+var computer_score = 0;
+localStorage["computer_score"] = 0;
 
 function setup() {
     createCanvas(W, H);
