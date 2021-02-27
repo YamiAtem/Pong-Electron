@@ -30,3 +30,14 @@ function start() {
         game_state = PLAY;
     }
 }
+
+function display_score() {
+    textSize(15);
+    fill("blue");
+    text("Player Score: " + player_score, 250, 30);
+    text("Payer Highscore: " + localStorage["player_highscore"], 250, 50);
+
+    fill("red");
+    text("Computer Score: " + computer_score, 20, 30);
+    text("Computer Highscore: " + localStorage["computer_highscore"], 20, 50);
+}
