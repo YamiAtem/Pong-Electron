@@ -8,9 +8,25 @@ function createMain(player, computer, ball, edges) {
     computer.shapeColor = "red";
 
     //ball
-    ball = createSprite(428-12.5, 241-12.5, 25, 25);
+    ball = createSprite(428 - 12.5, 241 - 12.5, 25, 25);
     ball.shapeColor = "yellow";
 
     //edges
     edges = createEdgeSprites();
+}
+
+function createBounceOffs(ball) {
+    ball.bounceOff(edges[3]);
+    ball.bounceOff(edges[2]);
+    ball.bounceOff(player);
+    ball.bounceOff(computer);
+}
+
+function start(ball, game_state) {
+    if (keyDown("space") && game_state === START) {
+        ball.velocityX = 2;
+        ball.velocityY = 2;
+
+        game_state = PLAY;
+    }
 }
